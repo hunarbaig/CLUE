@@ -1,0 +1,60 @@
+.plans {
+    background-color: $color-grey-light-1;
+    grid-column: center-start / center-end;
+    padding: 3rem; 
+    display: grid;
+
+    &__box {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 3rem;
+
+        @include respond (tab-port) {
+            grid-template-rows: 1fr;
+            grid-template-columns: none;
+        }
+    }
+
+    &__heading {
+        margin: 9rem 0 2rem 0;
+        text-align: center;
+    }
+
+    &__magazine {
+        width: 100%;
+        height: auto;
+        
+        
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        align-items: center;
+        justify-items: center;
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        margin-bottom: 2rem;
+
+    }
+
+    &__btn {
+        display: grid;
+        margin: 2.5rem 4rem;
+        align-self: center;
+        justify-self: center;
+        text-align: center;
+        padding: 1rem 2rem;
+    }
+
+    &__text {
+        grid-column: 2 / 3;
+
+        @include respond(phone) {
+            grid-column: 1 / -1;
+        }
+    }
+}

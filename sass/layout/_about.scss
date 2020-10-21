@@ -1,0 +1,62 @@
+.about {
+    background-color: $color-grey-light-3;
+    grid-column: center-start / center-end;
+    padding: 3rem;
+
+    &__heading {
+        margin: 7rem 0 2rem 0;
+        text-align: center;
+    }
+
+    &__shape {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        @include respond(phone) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__figure {
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+        align-content: center;
+    }
+
+    &__text-box {
+        padding: 2rem;
+    }
+
+    &__text {
+        font-size: 2rem;
+        margin-top: 3rem;
+        line-height: 1.5;
+    }
+
+    &__signature {
+        width: 35%;
+        height: auto;
+        margin: 2rem 0;
+
+        @include respond(phone) {
+            width: 60%;
+        }
+    }
+
+    &__img {
+        width: 25rem;
+        height: 25rem;
+        border-radius: 50%;
+        display: block;
+    }
+
+    &__caption {
+        color: $color-grey-dark-2;
+        font-size: 2rem;
+        line-height: 1;
+        margin: 2rem 0;
+    }
+
+
+}
